@@ -6,24 +6,25 @@
 ?>
 <?php get_header(); ?>
 
-<div>!!!!! single.php ブログ記事など !!!!!</div>
-
 <?php if (have_posts()) : ?>
-	<div>!!!!! have_posts !!!!!</div>
-
 	<?php while (have_posts()) : the_post(); ?>
-		<div>!!!!! post loop !!!!!</div>
 
-		<h2><?php the_title(); ?></h2>
-		<div>
-			<?php the_content(); ?>
-		</div>
+		<article class="max-w-3xl mx-auto px-6 py-16">
+			<h1 class="text-4xl font-bold mb-20">
+				<?php the_title(); ?>
+			</h1>
 
-		<div>
+			<div class="app-post-content-container max-w-none">
+				<?php the_content(); ?>
+			</div>
+		</article>
+
+		<div class="mt-64">
 			<?php comments_template(); ?>
 		</div>
-
 	<?php endwhile; ?>
 <?php endif; ?>
+
+</section>
 
 <?php get_footer(); ?>

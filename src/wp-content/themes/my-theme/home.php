@@ -6,24 +6,26 @@
 ?>
 <?php get_header(); ?>
 
-<div>!!!!! home.php ブログ一覧 !!!!!</div>
+<section class="max-w-5xl mx-auto px-6 py-16">
+	<h1 class="text-4xl font-bold mb-12">Blog</h1>
 
-<?php if (have_posts()) : ?>
-	<div>!!!!! have_posts !!!!!</div>
-	<?php while (have_posts()) : the_post(); ?>
-		<div>!!!!! post loop !!!!!</div>
+	<?php if (have_posts()) : ?>
+		<div class="grid md:grid-cols-2 gap-8">
+			<?php while (have_posts()) : the_post(); ?>
+				<a
+					href="<?php the_permalink(); ?>"
+					class="block bg-white rounded-2xl shadow hover:shadow-xl transition p-6">
+					<h2 class="text-xl font-semibold mb-2"><?php the_title(); ?></h2>
 
-		<div class="border-2 border-gray-400 rounded-2xl p-7 my-5">
-			<a href="<?php the_permalink(); ?>" class="text-2xl">
-				<?php the_title(); ?>
-			</a>
-			<div>
-				<?php the_content(); ?>
-			</div>
-
+					<p class="text-gray-600 mb-4"><?php the_excerpt(); ?></p>
+				</a>
+			<?php endwhile; ?>
 		</div>
+	<?php endif; ?>
 
-	<?php endwhile; ?>
-<?php endif; ?>
+	<nav>
+		<?php the_posts_pagination(); ?>
+	</nav>
+</section>
 
 <?php get_footer(); ?>

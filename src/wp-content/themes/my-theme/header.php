@@ -22,18 +22,22 @@
 </head>
 
 <body class="bg-gray-200">
-	<div id="page" class="container mx-auto bg-white">
+	<div class="bg-gradient-to-br from-indigo-100 via-white to-blue-100 min-h-screen">
 
-		<div id="header" role="banner" class="p-5 bg-gray-100">
-			<div id="headerimg">
-				<h1><a href="<?php echo home_url(); ?>/"><?php bloginfo('name'); ?></a></h1>
-				<div class="description"><?php bloginfo('description'); ?></div>
-			</div>
+		<div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+			<!-- Logo -->
+			<a href="/">
+				<div
+					class="text-2xl font-bold bg-gradient-to-r from-indigo-500 to-purple-500 bg-clip-text text-transparent">
+					MySite
+				</div>
+			</a>
 
+			<!-- Desktop Menu -->
 			<nav>
 				<?php wp_nav_menu(array('theme_location' => 'main-menu')); ?>
 			</nav>
 
 		</div>
 
-		<div class="p-10">
+		<div>

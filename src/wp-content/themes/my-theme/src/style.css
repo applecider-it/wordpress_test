@@ -3,4 +3,78 @@
 @tailwind utilities;
 
 @layer components {
+  /* ボタン */
+
+  .app-btn {
+    @apply px-4 py-2 rounded-lg;
+  }
+  .app-btn-primary {
+    @apply app-btn bg-blue-500 text-white hover:bg-blue-600;
+  }
+  .app-btn-indigo {
+    @apply app-btn bg-indigo-500 text-white hover:bg-indigo-600;
+  }
+  .app-btn-purple {
+    @apply app-btn bg-purple-500 text-white hover:bg-purple-600;
+  }
+
+  /* カード */
+  .app-card {
+    @apply bg-white rounded-2xl shadow-xl p-6 hover:scale-105 transition;
+  }
+
+  /* 投稿内容 */
+  .app-post-content-container {
+    li {
+      @apply text-gray-400 ml-2;
+    }
+
+    img {
+      @apply border-4 my-5;
+    }
+
+    p {
+      @apply my-5;
+    }
+  }
+}
+
+ul.menu {
+  @apply space-x-8 text-gray-700 font-medium;
+}
+
+ul.menu li {
+  @apply inline-block;
+}
+
+div.nav-links {
+  @apply flex justify-center items-center gap-3 mt-16;
+}
+
+div.nav-links > * {
+  @apply px-4 py-2 rounded-xl border border-gray-200 hover:bg-gray-100 transition;
+}
+
+div.nav-links > span {
+  @apply bg-black text-white shadow;
+}
+
+div.comment-body {
+  @apply space-y-5;
+}
+
+ol.commentlist a, form.comment-form a {
+  @apply text-blue-600 hover:underline;
+}
+
+div.comment-respond {
+  @apply mt-20;
+}
+
+form.comment-form input, form.comment-form textarea {
+  @apply w-full border rounded p-2;
+}
+
+.form-submit .submit {
+  @apply border border-black px-5 py-3 rounded-2xl mt-10 w-auto mx-auto block;
 }

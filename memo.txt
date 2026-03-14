@@ -4,6 +4,9 @@ cd /home/owner/workspace/tmp/wordpress_test/src
 
 -----------------------------------
 
+foreman start
+
+
 php -S localhost:8080 -t .
 
 

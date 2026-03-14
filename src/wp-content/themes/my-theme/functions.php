@@ -4,6 +4,11 @@
  * 設定用のコード実行
  */
 
+add_theme_support('menus'); 
+register_nav_menus(array(
+    'main-menu' => 'Main Menu',
+));
+
 add_action('after_setup_theme', function () {
 	//echo 123;
 });

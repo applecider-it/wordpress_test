@@ -6,21 +6,28 @@
 ?>
 <?php get_header(); ?>
 
-<div>!!!!! front-page.php !!!!!</div>
-
-<?php if (have_posts()) : ?>
-	<div>!!!!! have_posts !!!!!</div>
-	<?php while (have_posts()) : the_post(); ?>
-		<div>!!!!! post loop !!!!!</div>
-
-		<a href="<?php the_permalink(); ?>">
-			<?php the_title(); ?>
-		</a>
-		<div>
-			<?php the_content(); ?>
+<div class="flex items-center justify-center">
+	<div class="grid md:grid-cols-3 gap-8 p-10 max-w-6xl">
+		<div class="app-card">
+			<h2 class="text-xl font-bold mb-3">Design</h2>
+			<p class="text-gray-600">
+				美しいUIデザインを作るためのコンポーネント。
+			</p>
+			<button class="mt-4 app-btn-indigo"> 詳しく </button>
 		</div>
 
-	<?php endwhile; ?>
-<?php endif; ?>
+		<div class="app-card">
+			<h2 class="text-xl font-bold mb-3">Development</h2>
+			<p class="text-gray-600">高速に開発できるモダンなCSSフレームワーク。</p>
+			<button class="mt-4 app-btn-primary"> 詳しく </button>
+		</div>
+
+		<div class="app-card">
+			<h2 class="text-xl font-bold mb-3">Deploy</h2>
+			<p class="text-gray-600">簡単にサイトを公開できます。</p>
+			<button class="mt-4 app-btn-purple"> 詳しく </button>
+		</div>
+	</div>
+</div>
 
 <?php get_footer(); ?>
