@@ -1,0 +1,35 @@
+
+
+cd /home/owner/workspace/tmp/wordpress_test/src
+
+-----------------------------------
+
+php -S localhost:8080 -t .
+
+
+http://localhost:8080/
+
+
+http://localhost:8080/wp-admin/
+
+admin / adminadmin
+
+admin@localhost.com
+
+-----------------------------------
+
+My theme
+
+
+cd /home/owner/workspace/tmp/wordpress_test/src/wp-content/themes/my-theme
+
+
+Tailwind Build
+
+npx tailwindcss -i ./src/style.css -o ./dist/style.css --watch
+
+-----------------------------------
+
+ベーステーマの場所
+
+/home/owner/workspace/tmp/wordpress_test/src/wp-includes/theme-compat
