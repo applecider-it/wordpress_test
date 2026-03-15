@@ -16,8 +16,8 @@ add_action('after_setup_theme', function () {
 add_action('wp_enqueue_scripts', function () {
 	wp_enqueue_style(
 		'tailwind',
-		get_template_directory_uri() . '/dist/style.css',
+		get_template_directory_uri() . '/dist/css/app.css',
 		[],
-		filemtime(__DIR__ . '/dist/style.css')
+		filemtime(__DIR__ . '/dist/css/app.css')
 	);
 });
