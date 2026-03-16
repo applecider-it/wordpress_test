@@ -1,5 +1,6 @@
 /*
 !.gitignore
+!Procfile
 !wp-content/
  
 wp-content/*
